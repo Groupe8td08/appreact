@@ -28,12 +28,28 @@ class App extends React.Component  {
         <div>
           <Header />
             <Switch>
-             <Route path="/home" component={Home}/>
           
-             <Route path="/courbes-simples" component={Solo_courbes}/>
           
-             <Route path="/donut" component={Donut}/>
-             <Route path="/score" component={Score}/>
+          
+          <Route exact path="/">
+            <Home />
+           </Route>
+          
+             <Route exact path="/home">
+            <Home />
+           </Route>
+          
+             <Route exact path="/courbes-simples">
+          <Solo_courbes />
+           </Route>
+          
+             <Route exact path="/donut">
+          <Donut />
+           </Route>
+          
+             <Route exact path="/score">
+          <Score />
+           </Route>
              
            </Switch>
         </div> 
